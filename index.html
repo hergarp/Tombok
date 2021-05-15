@@ -21,7 +21,33 @@ and open the template in the editor.
               
                 
             </article>
-            
+                  <section>
+                    <h2>Kérem adja meg kutyája adatait az iskolai beíratkozáshoz!</h2>
+                    <br>
+                
+                    <form method="get" >
+                        <fieldset>
+                            <label for="nev">A kutya neve:</label>
+                            <input type="text" name="nev" id="nev" placeholder="Adja meg a nevét!" title="A név nagybetűvel kezdődik és legalább 3 karakter!" >
+                            <br>
+                            <label for="kor">Kora:</label>
+                            <input type="text" name="kor" id="kor" required placeholder="év" >
+                            <br>
+                            <label for="fajta">Fajtája:</label>
+                            <input type="text" name="fajta" id="fajta" required placeholder="fajta" >
+                            <br>
+                            <label for="suly">Súlya:</label>
+
+                            <input type="text" name="suly" id="suly" required placeholder="Kg" >
+                            <br>    
+
+                        </fieldset>
+                    
+                        <input type="button" name="kuld" id="kuld" value="Küld">
+
+
+                    </form>
+                </section>
             <footer>Hergár Péter</footer>
         </main>
         

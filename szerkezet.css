@@ -8,7 +8,8 @@ main, header, footer, article {border:1px solid gray;
 padding:5px}
 main {
     max-width:600px;
-    background-color: whitesmoke
+    background-color: whitesmoke;
+    margin:auto;
 }
 
 table {
