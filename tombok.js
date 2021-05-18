@@ -1,4 +1,6 @@
 $(function () {
+     tablazatbaKiir();
+    $("#kuld").click(mentes);
 //   tombMuveletek();
 //    var e1 = {
 //        Név:"Béla",
@@ -6,7 +8,7 @@ $(function () {
 //        Iskola:"ált Iskola"        
 //    };
 
-    tablazatbaKiir();
+ 
 
 
     $("article").on("click", "th", rendez);
@@ -14,6 +16,18 @@ $(function () {
     
 }
 );
+//var  tomb = [];
+function mentes(){
+        var kutyaObejktum = {
+        Név: $("#nev").val(),
+        Kor: $("#kor").val(),
+        Fajta: $("#fajta").val(),
+        Súlya: $("#suly").val()
+    };
+        tomb.push(kutyaObejktum);
+        tablazatbaKiir();
+}
+
 
 var tomb = [
     {
@@ -114,83 +128,83 @@ function rendez() {
 
 
 
-
-
-
-function rendezesek() {
-    var tomb = ["Béla", "Jenő", "Anna", "Géza"];
-    tomb.sort();
-
-    $("article").append(tomb.join(" ; ") + "<br>");
-    var szamTomb = [12, -3, 654, 4, 76];
-    szamTomb.sort();
-    $("article").append(szamTomb.join(" ; ") + "<br>");
-
-    szamTomb.sort(
-            function (a, b) {
-//                console.log("a: "+a+" b: "+b+" a-b:"+(a-b));
-
-                return b - a;
-            }
-    );
-
-
-    $("article").append(szamTomb.join(" ; ") + "<br>");
-    //véleltlen sorrend generálása
-    tomb.sort(
-            function (a, b) {
-                console.log(Math.random() - 0.5);
-                return Math.random() - 0.5;
-            }
-    );
-    $("article").append(tomb.join(" ; ") + "<br>");
-
-    szamTomb.sort(
-            function (a, b) {
-                console.log(Math.random() - 0.5);
-                return Math.random() - 0.5;
-            }
-    );
-    $("article").append(szamTomb.join(" ; ") + "<br>");
-    szamTomb.sort(
-            function (a, b) {
-                console.log(Math.random() - 0.5);
-                return Math.random() - 0.5;
-            }
-    );
-    $("article").append(szamTomb.join(" ; ") + "<br>");
-}
-
-function tombMuveletek() {
-    var tomb = ["Béla", "Jenő", "Géza"];
-//    var tomb=new Array("Béla","Jenő","Géza");
-    tomb[1] = "Gizi";
-//    tomb[tomb.length]="Réka";
-    console.log(tomb.length);
-    tomb.push("Réka", "Karcsi");//Tömb végére teszi az elemet
-    console.log(tomb);
-    tomb.pop();//a tömb utolsó elemének eltávolítása
-
-    $("article").append(tomb.join(" ; ") + "<br>");
-    tomb.shift();//A tömb első elemét távolítja el.
-    $("article").append(tomb.join(" ; ") + "<br>");
-//    tomb.splice(1,1);//Adott pozícióról adott számú elemet távolít el
-
-    var reszTomb = tomb.slice(1, 3);//első indextől a második indexig
-
-    $("article").append(reszTomb.join(" ; ") + "<br>");
-    $("article").append(tomb.join(" ; ") + "<br>");
-    tomb.splice(1, 2, "Feri");//Adott pozícióról adott számú elemet távolít el
-    $("article").append(tomb.join(" ; ") + "<br>");
-
-}
-
-
-
-//window.addEventListener("load",init);
-//function $(Név){
-//    return document.querySelectorAll(Név);
+//
+//
+//
+//function rendezesek() {
+//    var tomb = ["Béla", "Jenő", "Anna", "Géza"];
+//    tomb.sort();
+//
+//    $("article").append(tomb.join(" ; ") + "<br>");
+//    var szamTomb = [12, -3, 654, 4, 76];
+//    szamTomb.sort();
+//    $("article").append(szamTomb.join(" ; ") + "<br>");
+//
+//    szamTomb.sort(
+//            function (a, b) {
+////                console.log("a: "+a+" b: "+b+" a-b:"+(a-b));
+//
+//                return b - a;
+//            }
+//    );
+//
+//
+//    $("article").append(szamTomb.join(" ; ") + "<br>");
+//    //véleltlen sorrend generálása
+//    tomb.sort(
+//            function (a, b) {
+//                console.log(Math.random() - 0.5);
+//                return Math.random() - 0.5;
+//            }
+//    );
+//    $("article").append(tomb.join(" ; ") + "<br>");
+//
+//    szamTomb.sort(
+//            function (a, b) {
+//                console.log(Math.random() - 0.5);
+//                return Math.random() - 0.5;
+//            }
+//    );
+//    $("article").append(szamTomb.join(" ; ") + "<br>");
+//    szamTomb.sort(
+//            function (a, b) {
+//                console.log(Math.random() - 0.5);
+//                return Math.random() - 0.5;
+//            }
+//    );
+//    $("article").append(szamTomb.join(" ; ") + "<br>");
 //}
-//function init() {
-//    $("article")[0].innerHTML+="Hello";
+//
+//function tombMuveletek() {
+//    var tomb = ["Béla", "Jenő", "Géza"];
+////    var tomb=new Array("Béla","Jenő","Géza");
+//    tomb[1] = "Gizi";
+////    tomb[tomb.length]="Réka";
+//    console.log(tomb.length);
+//    tomb.push("Réka", "Karcsi");//Tömb végére teszi az elemet
+//    console.log(tomb);
+//    tomb.pop();//a tömb utolsó elemének eltávolítása
+//
+//    $("article").append(tomb.join(" ; ") + "<br>");
+//    tomb.shift();//A tömb első elemét távolítja el.
+//    $("article").append(tomb.join(" ; ") + "<br>");
+////    tomb.splice(1,1);//Adott pozícióról adott számú elemet távolít el
+//
+//    var reszTomb = tomb.slice(1, 3);//első indextől a második indexig
+//
+//    $("article").append(reszTomb.join(" ; ") + "<br>");
+//    $("article").append(tomb.join(" ; ") + "<br>");
+//    tomb.splice(1, 2, "Feri");//Adott pozícióról adott számú elemet távolít el
+//    $("article").append(tomb.join(" ; ") + "<br>");
+//
 //}
+//
+//
+//
+////window.addEventListener("load",init);
+////function $(Név){
+////    return document.querySelectorAll(Név);
+////}
+////function init() {
+////    $("article")[0].innerHTML+="Hello";
+////}
